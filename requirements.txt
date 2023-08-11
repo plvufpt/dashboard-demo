@@ -1,6 +1,6 @@
 pandas
 numpy
 vnstock>=0.1.9.4
-matplotlib.pyplot=3.7.2
+matplotlib.pyplot==3.7.2
 yfinance>=0.2.27
 investpy>=1.0.8
