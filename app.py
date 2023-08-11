@@ -36,7 +36,6 @@ multiple_stock = pd.concat([vic['Date'],
                        nvl['Close'],
                        vic['Close']
                        ], axis=1)
-st.write(multiple_stock.head())
 
 new_name = ['Date',
             'Close_VCB',
