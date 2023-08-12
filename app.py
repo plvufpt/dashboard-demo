@@ -73,20 +73,20 @@ st.write(vcv_matrix)
 st.subheader("Variance Portfolio")
 #tính variance portfolio
 var_p = np.dot(np.transpose(weight), np.dot(vcv_matrix, weight))
-st.write("var_p")
+st.write(var_p)
 st.subheader("STD of Portfolio")
 #tính std của portfolio = căn bậc 2 của variance portfolio
 std_p = np.sqrt(var_p)
-st.write("std_p")
+st.write(std_p)
 st.subheader("STD Portfolio Annual")
 #tuy nhiên std_p hiện tại đang tính là daily và nếu mình muốn tính annual thì nhân nó cho căn bậc 2 của 250 trong đó 250 là số ngầy gd của 1 năm
 std_p_annual = std_p * np.sqrt(250)
-st.write("std_p_annual")
+st.write(std_p_annual)
 # tuy nhiên mục đích chúng ta tạo ra danh mục này chính là compare các danh mục đầu tư rủi ro này với rủi ro cá nhân
 # để tính rủi ro từng danh mục ta lấy độ lệch chuẩn của 'multiple_stocks_ret' các cổ phiếu hàng ngày. Tuy nhiên chúng tôi muốn tính std của hàng năm vì thế tôi nhân cho căn bậc 2 của 250
 st.subheader("individual_risks")
 individual_risks = np.std(multiple_stocks_ret) * np.sqrt(250)
-st.write("individual_risks")
+st.write(individual_risks)
 
 
 
