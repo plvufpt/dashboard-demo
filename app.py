@@ -53,7 +53,7 @@ multiple_stock.columns = new_name
 multiple_stock.dropna(inplace=True)
 multiple_stock.set_index('Date', inplace=True)
 
-st.write(multiple_stock.head())
+st.dataframe(multiple_stock.head())
 
 
 
