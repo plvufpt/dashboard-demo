@@ -50,7 +50,14 @@ multiple_stock.set_index('Date', inplace=True)
 # Write datframe mutiple price stocks 
 st.dataframe(multiple_stock)
 
+st.header("Estimating Portfolio Risk Multiple Assets")
+st.subheader("Daily return")
+# First, We need to do is to calculate daily returns
+# về công thức gốc thì giá trị ret = (giá ngày hôm nay - giá ngày trước đó) - 1
+multiple_stocks_ret = multiple_stock.pct_change(1)
+st.write(multiple_stocks_ret)
 
+# Write Daily return
 
 
 
