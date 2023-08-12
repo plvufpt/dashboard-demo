@@ -1,5 +1,5 @@
 import vnstock
-import pandas
+import pandas as pd
 def get_stock(stock):
   stock = vnstock.stock_historical_data(stock,'2018-01-01', '2023-01-01')
   stock.columns = ['Date', 'Open', 'High', 'Low', 'Close', 'Vol', 'Ticker']
