@@ -64,7 +64,7 @@ st.subheader("Calculate Risk Portfolio")
 # number_stock bằng 10 vì chia đều cho 10 mã cổ phiếu
 number_stock = 10
 weight = [1 / number_stock] * number_stock
-weight
+st.dataframe(weight)
 st.subheader("Variance Covariance Matrix")
 #variance covariance matrix or sigma
 # này là tính mối liên hệ giữa các cổ phiếu với nhau
@@ -85,7 +85,7 @@ st.write("std_p_annual")
 # tuy nhiên mục đích chúng ta tạo ra danh mục này chính là compare các danh mục đầu tư rủi ro này với rủi ro cá nhân
 # để tính rủi ro từng danh mục ta lấy độ lệch chuẩn của 'multiple_stocks_ret' các cổ phiếu hàng ngày. Tuy nhiên chúng tôi muốn tính std của hàng năm vì thế tôi nhân cho căn bậc 2 của 250
 st.subheader("individual_risks")
-individual_risks = np.std(returns_df) * np.sqrt(250)
+individual_risks = np.std(multiple_stocks_ret) * np.sqrt(250)
 st.write("individual_risks")
 
 
