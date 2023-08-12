@@ -6,7 +6,11 @@ import yfinance as yf
 import investpy as ipy
 import streamlit as st
 import all_function as af
-# Call function get stocks
+
+estimating_portfolio_risk_multiple_assets, news = st.tabs([
+    'Estimating portfolio Risk Multiple Assets', "News"])
+with estimating_portfolio_risk_multiple_assets:
+  # Call function get stocks
 vcb = af.get_stock('VCB')
 vnm = af.get_stock('VNM')
 fpt = af.get_stock('FPT')
@@ -87,6 +91,15 @@ st.write(std_p_annual)
 st.subheader("individual_risks")
 individual_risks = np.std(multiple_stocks_ret) * np.sqrt(250)
 st.write(individual_risks)
+
+
+
+
+
+
+
+
+
 
 
 
