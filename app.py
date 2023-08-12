@@ -5,20 +5,20 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 import investpy as ipy
 import streamlit as st
-import all_function
+import all_function as af
 
 
 
-vcb = get_stock('VCB')
-vnm = get_stock('VNM')
-fpt = get_stock('FPT')
-acb = get_stock('ACB')
-hpg = get_stock('HPG')
-bid = get_stock('BID')
-mbb = get_stock('MBB')
-mwg = get_stock('MWG')
-nvl = get_stock('NVL')
-vic = get_stock('VIC')
+vcb = af.get_stock('VCB')
+vnm = af.get_stock('VNM')
+fpt = af.get_stock('FPT')
+acb = af.get_stock('ACB')
+hpg = af.get_stock('HPG')
+bid = af.get_stock('BID')
+mbb = af.get_stock('MBB')
+mwg = af.get_stock('MWG')
+nvl = af.get_stock('NVL')
+vic = af.get_stock('VIC')
 
 multiple_stock = pd.concat([vic['Date'],
                        vcb['Close'],
